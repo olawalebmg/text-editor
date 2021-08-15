@@ -21,6 +21,15 @@ filemenu.add_command(label="Save")
 filemenu.add_command(label="Save as")
 filemenu.add_command(label="Close")
 
+# file menu functions
+file_name= None
+
+def new_file(event=None):
+    app.title("Untitled")
+    global file_name
+    file_name = None
+    content_text.delete(1.0, END)
+
 # edit menu
 editmenu = tk.Menu(app_menu, tearoff=False)
 
